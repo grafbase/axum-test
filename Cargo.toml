@@ -29,7 +29,7 @@ ws = ["axum/ws", "dep:uuid", "dep:base64", "dep:tokio-tungstenite", "dep:futures
 
 [dependencies]
 auto-future = "1.0"
-axum = { version = "0.7", features = ["tokio"] }
+axum = { git = "https://github.com/grafbase/axum", features = ["tokio"], branch = "axum-tungstenite-upgrade" }
 anyhow = "1.0"
 bytes = "1.7"
 cookie = "0.18"
@@ -69,7 +69,7 @@ tokio-tungstenite = { version = "0.23", optional = true }
 
 [dev-dependencies]
 async-trait = "0.1"
-axum = { version = "0.7", features = ["multipart", "tokio", "ws"] }
+axum = { git = "https://github.com/grafbase/axum", features = ["multipart", "tokio", "ws"], branch = "axum-tungstenite-upgrade" }
 axum-extra = { version = "0.9", features = ["cookie", "typed-routing", "query"] }
 axum-msgpack = "0.4"
 axum-yaml = "0.4"
